@@ -21,8 +21,8 @@ export default function CTA() {
             </p>
 
             <div className="cta-actions">
-              <a href="tel:+919979252150" className="btn-pill-blue cta-btn">
-                <span>📞 Call Dilipbhai: +91 99792 52150</span>
+              <a href="tel:+918320703484" className="btn-pill-blue cta-btn">
+                <span>📞 Call Dilipbhai: +91 83207 03484</span>
               </a>
               <Link to="/contact" className="btn-pill-outline cta-outline-btn">
                 <span>Request Building Estimate</span>
@@ -31,7 +31,7 @@ export default function CTA() {
             </div>
 
             <div className="cta-badges">
-              <span className="cta-badge">● મો. ૯૯૭૯૨ ૫૨૧૫૦</span>
+              <span className="cta-badge">● મો. ૮૩૨૦૭ ૦૩૪૮૪</span>
               <span className="cta-badge">● બાર ઓરડા ફળીયું, વાસદ, તા.જી. આણંદ</span>
               <span className="cta-badge">● લેબર તથા મટીરીયલ સાથે</span>
             </div>

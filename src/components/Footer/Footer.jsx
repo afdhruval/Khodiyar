@@ -36,8 +36,8 @@ export default function Footer() {
           </div>
 
           <div className="footer-hero__right">
-            <a href="tel:+919979252150" className="btn-pill-blue footer-main-cta">
-              <span>Call Dilipbhai: +91 99792 52150</span>
+            <a href="tel:+918320703484" className="btn-pill-blue footer-main-cta">
+              <span>Call Dilipbhai: +91 83207 03484</span>
               <span className="footer-cta-arrow">📞</span>
             </a>
           </div>
@@ -102,8 +102,8 @@ export default function Footer() {
             <div className="footer-contact-items">
               <div className="footer-contact-item">
                 <span className="footer-contact-label">Proprietor Contact</span>
-                <a href="tel:+919979252150" className="footer-contact-val">
-                  +91 99792 52150 (Dilipbhai)
+                <a href="tel:+918320703484" className="footer-contact-val">
+                  +91 83207 03484 (Dilipbhai)
                 </a>
               </div>
               <div className="footer-contact-item">

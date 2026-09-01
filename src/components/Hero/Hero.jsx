@@ -66,13 +66,13 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Right Column: Architectural Showcase with Official Circular Stamp */}
+          {/* Right Column: Real Construction Showcase with Official Stamp */}
           <div className="hero-right">
             <div className="hero-media-wrapper">
               <div className="hero-circle-mask">
                 <img
-                  src={IMAGES.heroSculpture}
-                  alt="Architectural masterwork by Khodiyar Construction"
+                  src={IMAGES.heroConstruction}
+                  alt="Khodiyar Construction modern house building in progress"
                   className="hero-circle-img"
                 />
                 
@@ -91,8 +91,8 @@ export default function Hero() {
               </p>
 
               <div className="hero-cta-wrap">
-                <a href="tel:+919979252150" className="btn-pill-dark">
-                  <span>Call Dilipbhai: +91 99792 52150</span>
+                <a href="tel:+918320703484" className="btn-pill-dark">
+                  <span>Call Dilipbhai: +91 83207 03484</span>
                   <div className="btn-arrow-circle">📞</div>
                 </a>
                 <Link to="/contact" className="btn-pill-outline">

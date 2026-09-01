@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <>
       <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-        {/* Top Mini Bar with Single Verified Phone Number */}
+        {/* Top Mini Bar with Verified Phone Number 83207 03484 */}
         <div className="navbar__topbar">
           <div className="navbar__container navbar__topbar-inner">
             <div className="navbar__topbar-left">
@@ -48,8 +48,8 @@ export default function Navbar() {
               <span className="navbar__topbar-item">Vasad, Anand · Est. 2005</span>
             </div>
             <div className="navbar__topbar-right">
-              <a href="tel:+919979252150" className="navbar__topbar-link">
-                <span>📞 Call Dilipbhai: +91 99792 52150</span>
+              <a href="tel:+918320703484" className="navbar__topbar-link">
+                <span>📞 Call Dilipbhai: +91 83207 03484</span>
               </a>
             </div>
           </div>
@@ -150,11 +150,11 @@ export default function Navbar() {
 
             {/* Right Action */}
             <div className="navbar__actions">
-              <a href="tel:+919979252150" className="navbar__phone-badge">
+              <a href="tel:+918320703484" className="navbar__phone-badge">
                 <span className="navbar__phone-icon">📞</span>
                 <div className="navbar__phone-text">
                   <span className="navbar__phone-label">Call Dilipbhai</span>
-                  <span className="navbar__phone-num">+91 99792 52150</span>
+                  <span className="navbar__phone-num">+91 83207 03484</span>
                 </div>
               </a>
 
@@ -190,7 +190,7 @@ export default function Navbar() {
               <div className="mobile-overlay__meta">
                 <span className="studio-tag">KHODIYAR CONSTRUCTION · VASAD</span>
                 <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', marginTop: '0.25rem' }}>
-                  પ્રો. પ્રજાપતિ દિલીપભાઈ · મો. ૯૯૭૯૨ ૫૨૧૫૦
+                  પ્રો. પ્રજાપતિ દિલીપભાઈ · મો. ૮૩૨૦૭ ૦૩૪૮૪
                 </p>
               </div>
 
@@ -203,8 +203,8 @@ export default function Navbar() {
               </ul>
 
               <div className="mobile-overlay__footer">
-                <a href="tel:+919979252150" className="btn-pill-blue" style={{ width: '100%', justifyContent: 'center' }}>
-                  <span>📞 Call Dilipbhai: +91 99792 52150</span>
+                <a href="tel:+918320703484" className="btn-pill-blue" style={{ width: '100%', justifyContent: 'center' }}>
+                  <span>📞 Call Dilipbhai: +91 83207 03484</span>
                 </a>
                 <Link to="/contact" className="btn-pill-dark" style={{ width: '100%', justifyContent: 'center' }}>
                   <span>Get Estimate & Quote</span>
@@ -212,7 +212,7 @@ export default function Navbar() {
                 </Link>
                 <div className="mobile-overlay__contact-details">
                   <p>📍 બાર ઓરડા ફળીયું, વાસદ, તા.જી. આણંદ</p>
-                  <p>📞 મો. ૯૯૭૯૨ ૫૨૧૫૦</p>
+                  <p>📞 મો. ૮૩૨૦૭ ૦૩૪૮૪</p>
                   <p>✉️ info@khodiyarconstruction.com</p>
                 </div>
               </div>

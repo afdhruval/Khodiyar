@@ -10,8 +10,8 @@ const contactInfo = [
   },
   {
     label: 'Direct Phone & WhatsApp',
-    value: '+91 99792 52150 (Dilipbhai)',
-    links: ['tel:+919979252150'],
+    value: '+91 83207 03484 (Dilipbhai)',
+    links: ['tel:+918320703484'],
   },
   {
     label: 'Office & Workshop Address',
@@ -103,10 +103,10 @@ export default function Contact() {
                   </div>
                   <h3 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>Inquiry Received</h3>
                   <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', maxWidth: 420 }}>
-                    Thank you. Dilipbhai Prajapati will contact you directly on your phone or WhatsApp (+91 99792 52150) within 24 hours.
+                    Thank you. Dilipbhai Prajapati will contact you directly on your phone or WhatsApp (+91 83207 03484) within 24 hours.
                   </p>
-                  <a href="tel:+919979252150" className="btn-pill-blue" style={{ marginTop: '0.5rem' }}>
-                    <span>Call Now: +91 99792 52150</span>
+                  <a href="tel:+918320703484" className="btn-pill-blue" style={{ marginTop: '0.5rem' }}>
+                    <span>Call Now: +91 83207 03484</span>
                   </a>
                 </motion.div>
               ) : (
@@ -119,7 +119,7 @@ export default function Contact() {
                     </div>
                     <div className="form-group">
                       <label htmlFor="phone">Phone / WhatsApp Number *</label>
-                      <input id="phone" name="phone" type="tel" placeholder="+91 99792 52150" required />
+                      <input id="phone" name="phone" type="tel" placeholder="+91 83207 03484" required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="email">Email Address</label>
