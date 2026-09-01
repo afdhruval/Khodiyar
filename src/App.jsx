@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Lenis from 'lenis';
 import './styles/global.css';
 
@@ -22,7 +22,6 @@ function ScrollToTop() {
 
 function AppContent() {
   useEffect(() => {
-    // Initialize Lenis smooth scroll
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -53,10 +52,18 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/company" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/sectors" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/portfolio" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/quote" element={<Contact />} />
+          {/* Catch-all & legacy path redirects */}
+          <Route path="/Khodiyar" element={<Navigate to="/" replace />} />
+          <Route path="/Khodiyar/*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />

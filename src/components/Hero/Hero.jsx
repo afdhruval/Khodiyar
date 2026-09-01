@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { IMAGES } from '../../assets/images';
+import stampLogo from '../../assets/stamp_logo.png';
 import './Hero.css';
 
 const particles = [
@@ -45,10 +46,13 @@ export default function Hero() {
 
       <div className="container hero-container">
         <div className="hero-grid">
-          {/* Left Column: Massive Editorial Headline */}
+          {/* Left Column: Massive Editorial Headline with Official Stamp */}
           <div className="hero-left">
-            <div className="studio-tag">
-              PREMIER BUILDER · EST. 2005 · GUJARAT
+            <div className="hero-badge-row">
+              <img src={stampLogo} alt="Ai Shri Khodiyar Stamp" className="hero-mini-stamp" />
+              <div className="studio-tag" style={{ margin: 0 }}>
+                AI SHRI KHODIYAR CONSTRUCTION · EST. 2005 · VASAD, ANAND
+              </div>
             </div>
 
             <h1 className="editorial-headline hero-title">
@@ -56,9 +60,13 @@ export default function Hero() {
               structures people<br />
               <span className="highlight-blue">remember <span className="hero-title-dot">.</span></span>
             </h1>
+
+            <p className="hero-tagline-gujarati">
+              મકાન નું બાંધકામ લેબર તથા મટીરીયલ સાથે કામ કરી આપનાર
+            </p>
           </div>
 
-          {/* Right Column: Architectural Circle & Boutique Pitch */}
+          {/* Right Column: Architectural Showcase with Official Circular Stamp */}
           <div className="hero-right">
             <div className="hero-media-wrapper">
               <div className="hero-circle-mask">
@@ -67,26 +75,28 @@ export default function Hero() {
                   alt="Architectural masterwork by Khodiyar Construction"
                   className="hero-circle-img"
                 />
-                <div className="hero-circle-badge">
-                  <span>20+ YRS</span>
-                  <span>EXPERTISE</span>
+                
+                {/* Official Circular Stamp Badge */}
+                <div className="hero-seal-badge">
+                  <img src={stampLogo} alt="Khodiyar Construction Stamp Logo" className="hero-seal-stamp-img" />
                 </div>
               </div>
             </div>
 
             <div className="hero-bio-block">
               <p className="hero-bio-text">
-                Two decades, one obsession — turning ambitious blueprints into enduring
-                landmarks with the craft of master builders and the precision of a modern team.
+                Under the leadership of <strong>Prajapati Dilipbhai</strong>, we deliver residential,
+                commercial, and industrial builds with unmatched craftsmanship, structural safety,
+                and on-time handover across Gujarat.
               </p>
 
               <div className="hero-cta-wrap">
-                <Link to="/contact" className="btn-pill-dark">
-                  <span>Start a project</span>
-                  <div className="btn-arrow-circle">→</div>
-                </Link>
-                <Link to="/projects" className="hero-text-link">
-                  <span>Explore 500+ builds</span>
+                <a href="tel:+919979252150" className="btn-pill-dark">
+                  <span>Call Dilipbhai: +91 99792 52150</span>
+                  <div className="btn-arrow-circle">📞</div>
+                </a>
+                <Link to="/contact" className="btn-pill-outline">
+                  <span>Get Free Estimate →</span>
                 </Link>
               </div>
             </div>
@@ -107,12 +117,12 @@ export default function Hero() {
           <div className="hero-trust-divider" />
           <div className="hero-trust-item">
             <span className="hero-trust-num">100%</span>
-            <span className="hero-trust-label">ISO & Safety Compliant</span>
+            <span className="hero-trust-label">Turnkey Material & Labor</span>
           </div>
           <div className="hero-trust-divider" />
           <div className="hero-trust-item">
-            <span className="hero-trust-num">Gujarat</span>
-            <span className="hero-trust-label">Ahmedabad · Surat · Rajkot</span>
+            <span className="hero-trust-num">Vasad · Anand</span>
+            <span className="hero-trust-label">Vadodara · Ahmedabad · Gujarat</span>
           </div>
         </div>
       </div>

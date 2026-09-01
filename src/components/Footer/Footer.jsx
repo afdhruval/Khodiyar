@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import navLogo from '../../assets/nav_logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -27,18 +28,18 @@ export default function Footer() {
         {/* Massive Top Inquiry Callout */}
         <div className="footer-hero">
           <div className="footer-hero__left">
-            <span className="footer-tag">READY TO BUILD</span>
+            <span className="footer-tag">READY TO START YOUR BUILD?</span>
             <h2 className="footer-headline">
-              Have an upcoming build?<br />
-              <span className="footer-headline-blue">Let's craft something lasting.</span>
+              મકાન નું બાંધકામ લેબર તથા મટીરીયલ સાથે.<br />
+              <span className="footer-headline-blue">Let's build with master craft.</span>
             </h2>
           </div>
 
           <div className="footer-hero__right">
-            <Link to="/contact" className="btn-pill-blue footer-main-cta">
-              <span>Start your project</span>
-              <span className="footer-cta-arrow">↗</span>
-            </Link>
+            <a href="tel:+919979252150" className="btn-pill-blue footer-main-cta">
+              <span>Call Dilipbhai: +91 99792 52150</span>
+              <span className="footer-cta-arrow">📞</span>
+            </a>
           </div>
         </div>
 
@@ -46,70 +47,76 @@ export default function Footer() {
 
         {/* Main Footer Directory */}
         <div className="footer-grid">
-          {/* Brand Info & Gujarati Heritage */}
+          {/* Brand Info & Real Details */}
           <div className="footer-col footer-col--brand">
             <div className="footer-brand">
-              <span className="footer-brand-dot" />
-              <span className="footer-brand-name">khodiyar_</span>
+              <img src={navLogo} alt="Khodiyar Construction" className="footer-brand-img" />
+              <div className="footer-brand-text-wrap">
+                <span className="footer-brand-name">KHODIYAR</span>
+                <span className="footer-brand-sub">CONSTRUCTION</span>
+              </div>
             </div>
-            <p className="footer-brand-gujarati">॥ આઈ શ્રી ખોડીયાર કન્સ્ટ્રકશન ॥</p>
+            <p className="footer-brand-gujarati">
+              ॥ આઈ શ્રી ખોડીયાર માં ॥<br />
+              પ્રો. પ્રજાપતિ દિલીપભાઈ
+            </p>
             <p className="footer-brand-bio">
-              Architectural construction studio delivering landmark residential,
-              commercial and civil infrastructure across Gujarat since 2005.
+              Complete building construction solutions with labor and material contracts.
+              Trusted by homeowners and commercial developers across Anand, Vadodara & Gujarat.
             </p>
 
             {/* Live studio time */}
             <div className="footer-time-badge">
               <span className="footer-live-dot" />
-              <span>Ahmedabad, IN — {currentTime || '03:30 PM'} IST</span>
+              <span>Vasad, Anand, Gujarat — {currentTime || '04:00 PM'} IST</span>
             </div>
           </div>
 
           {/* Navigation */}
           <div className="footer-col">
-            <h4 className="footer-col-heading">Studio</h4>
+            <h4 className="footer-col-heading">Company</h4>
             <ul className="footer-links">
-              <li><Link to="/">Home Overview</Link></li>
-              <li><Link to="/about">About Studio</Link></li>
-              <li><Link to="/services">Capabilities</Link></li>
-              <li><Link to="/projects">Selected Works</Link></li>
-              <li><Link to="/contact">Get in Touch</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services & Contracts</Link></li>
+              <li><Link to="/projects">Project Portfolio</Link></li>
+              <li><Link to="/contact">Get an Estimate</Link></li>
             </ul>
           </div>
 
           {/* Disciplines */}
           <div className="footer-col">
-            <h4 className="footer-col-heading">Disciplines</h4>
+            <h4 className="footer-col-heading">Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services">Custom Residential</Link></li>
+              <li><Link to="/services">Residential House Construction</Link></li>
+              <li><Link to="/services">Material & Labor Contracts</Link></li>
               <li><Link to="/services">Commercial Complexes</Link></li>
-              <li><Link to="/services">Industrial Facilities</Link></li>
-              <li><Link to="/services">Infrastructure & Civil</Link></li>
-              <li><Link to="/services">Restoration & Retrofit</Link></li>
+              <li><Link to="/services">RCC Foundation & Slabs</Link></li>
+              <li><Link to="/services">Renovation & Finishing</Link></li>
             </ul>
           </div>
 
-          {/* Contact Direct */}
+          {/* Contact Direct with Verified Single Phone Number */}
           <div className="footer-col footer-col--contact">
-            <h4 className="footer-col-heading">Direct Inquiry</h4>
+            <h4 className="footer-col-heading">Direct Contact</h4>
             <div className="footer-contact-items">
               <div className="footer-contact-item">
-                <span className="footer-contact-label">Email</span>
+                <span className="footer-contact-label">Proprietor Contact</span>
+                <a href="tel:+919979252150" className="footer-contact-val">
+                  +91 99792 52150 (Dilipbhai)
+                </a>
+              </div>
+              <div className="footer-contact-item">
+                <span className="footer-contact-label">Office Address</span>
+                <p className="footer-contact-val">
+                  બાર ઓરડા ફળીયું, વાસદ, તા.જી. આણંદ – 388306, ગુજરાત
+                </p>
+              </div>
+              <div className="footer-contact-item">
+                <span className="footer-contact-label">Electronic Mail</span>
                 <a href="mailto:info@khodiyarconstruction.com" className="footer-contact-val">
                   info@khodiyarconstruction.com
                 </a>
-              </div>
-              <div className="footer-contact-item">
-                <span className="footer-contact-label">Phone</span>
-                <a href="tel:+919876543210" className="footer-contact-val">
-                  +91 98765 43210
-                </a>
-              </div>
-              <div className="footer-contact-item">
-                <span className="footer-contact-label">Headquarters</span>
-                <p className="footer-contact-val">
-                  Plot No. 12, Industrial Hub, Ahmedabad – 380001, Gujarat, India
-                </p>
               </div>
             </div>
           </div>
@@ -118,14 +125,12 @@ export default function Footer() {
         {/* Bottom Metadata */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} Ai Shri Khodiyar Construction. All rights reserved.
+            © {new Date().getFullYear()} Ai Shri Khodiyar Construction (દિલીપભાઈ પ્રજાપતિ - વાસદ, આણંદ). All rights reserved.
           </p>
           <div className="footer-legal">
-            <span className="footer-legal-status">● Accepting select projects for 2026/2027</span>
+            <span className="footer-legal-status">● Serving Anand, Vadodara, Ahmedabad & Gujarat</span>
             <span className="footer-legal-sep">/</span>
-            <Link to="/about">Privacy</Link>
-            <span className="footer-legal-sep">/</span>
-            <Link to="/contact">Terms</Link>
+            <Link to="/contact">Get Quote</Link>
           </div>
         </div>
       </div>

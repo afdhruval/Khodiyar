@@ -3,7 +3,6 @@ import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import Services from '../components/Services/Services';
 import Projects from '../components/Projects/Projects';
-import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
 import Stats from '../components/Stats/Stats';
 import Process from '../components/Process/Process';
 import Testimonials from '../components/Testimonials/Testimonials';
@@ -17,7 +16,6 @@ export default function Home() {
       <Services />
       <Projects />
       <Stats />
-      <WhyChooseUs />
       <Process />
       <Testimonials />
       <CTA />

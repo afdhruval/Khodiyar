@@ -31,11 +31,11 @@
 }
 
 .footer-headline {
-  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
   font-weight: 800;
   color: #FFFFFF !important;
   letter-spacing: -0.035em;
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .footer-headline-blue {
@@ -54,11 +54,6 @@
 
 .footer-cta-arrow {
   font-size: 1.1rem;
-  transition: transform var(--transition-fast);
-}
-
-.footer-main-cta:hover .footer-cta-arrow {
-  transform: translate(2px, -2px);
 }
 
 .footer-divider {
@@ -86,34 +81,49 @@
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.85rem;
 }
 
-.footer-brand-dot {
-  width: 8px;
-  height: 8px;
+.footer-brand-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
   border-radius: 50%;
-  background: var(--color-blue);
+  background: #FFFFFF;
+}
+
+.footer-brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
 }
 
 .footer-brand-name {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #FFFFFF !important;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+}
+
+.footer-brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-blue);
+  font-weight: 700;
+  letter-spacing: 0.16em;
 }
 
 .footer-brand-gujarati {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5) !important;
-  letter-spacing: 0.05em;
-  margin-top: -0.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7) !important;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
 }
 
 .footer-brand-bio {
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
   line-height: 1.7;
   max-width: 320px;
 }
