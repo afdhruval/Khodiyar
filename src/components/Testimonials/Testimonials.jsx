@@ -40,14 +40,14 @@ export default function Testimonials() {
   return (
     <section className="testimonials-editorial section">
       <div className="container">
-        <div className="testimonials-header" data-aos="fade-up">
+        <div className="testimonials-header">
           <span className="studio-tag">VERIFIED CLIENT TESTIMONIALS</span>
           <h2 className="section-title">
             Words from the people who <span className="highlight-blue">live and work in our builds.</span>
           </h2>
         </div>
 
-        <div className="testimonials-box" data-aos="fade-up">
+        <div className="testimonials-box">
           {/* Main Featured Quote */}
           <div className="testimonials-main">
             <span className="quote-mark">“</span>
@@ -56,33 +56,24 @@ export default function Testimonials() {
               <motion.blockquote
                 key={activeIdx}
                 className="testimonial-quote"
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.4 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
               >
                 {t.quote}
               </motion.blockquote>
             </AnimatePresence>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`author-${activeIdx}`}
-                className="testimonial-meta"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="testimonial-author-wrap">
-                  <span className="testimonial-author-name">{t.author}</span>
-                  <span className="testimonial-author-role">{t.role}, {t.company}</span>
-                </div>
-                <div className="testimonial-project-tag">
-                  <span>📍 {t.project}</span>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+            <div className="testimonial-meta">
+              <div className="testimonial-author-wrap">
+                <span className="testimonial-author-name">{t.author}</span>
+                <span className="testimonial-author-role">{t.role}, {t.company}</span>
+              </div>
+              <div className="testimonial-project-tag">
+                <span>📍 {t.project}</span>
+              </div>
+            </div>
           </div>
 
           {/* Side Selector Tabs */}

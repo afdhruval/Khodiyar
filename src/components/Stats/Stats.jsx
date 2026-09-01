@@ -1,7 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import './Stats.css';
 
 const stats = [
@@ -12,12 +11,12 @@ const stats = [
 ];
 
 export default function Stats() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section className="stats-editorial" ref={ref}>
       <div className="container">
-        <div className="stats-header" data-aos="fade-up">
+        <div className="stats-header">
           <span className="studio-tag">VERIFIABLE PERFORMANCE</span>
           <h2 className="section-title">
             The metrics behind our <span className="highlight-blue">twenty-year reputation.</span>
@@ -25,14 +24,8 @@ export default function Stats() {
         </div>
 
         <div className="stats-strip">
-          {stats.map((s, idx) => (
-            <motion.div
-              key={s.label}
-              className="stat-box"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: idx * 0.1, duration: 0.6 }}
-            >
+          {stats.map((s) => (
+            <div key={s.label} className="stat-box">
               <div className="stat-value">
                 {inView ? (
                   <CountUp
@@ -42,13 +35,13 @@ export default function Stats() {
                     suffix={s.suffix}
                   />
                 ) : (
-                  `0${s.suffix}`
+                  `${s.num}${s.suffix}`
                 )}
               </div>
               <div className="stat-indicator-line" />
               <h3 className="stat-title">{s.label}</h3>
               <p className="stat-explanation">{s.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

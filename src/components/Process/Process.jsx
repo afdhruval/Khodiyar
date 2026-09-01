@@ -39,7 +39,7 @@ export default function Process() {
     <section className="process-editorial section">
       <div className="container">
         {/* Header */}
-        <div className="process-header" data-aos="fade-up">
+        <div className="process-header">
           <div className="process-header__left">
             <span className="studio-tag">METHODOLOGY · STEP BY STEP</span>
             <h2 className="section-title">
@@ -56,13 +56,8 @@ export default function Process() {
 
         {/* Roadmap Grid */}
         <div className="process-grid">
-          {stages.map((stage, idx) => (
-            <div
-              className="process-card"
-              key={stage.step}
-              data-aos="fade-up"
-              data-aos-delay={idx * 60}
-            >
+          {stages.map((stage) => (
+            <div className="process-card" key={stage.step}>
               <div className="process-card__header">
                 <span className="process-card__num">{stage.step}</span>
                 <span className="process-card__line" />

@@ -1,16 +1,16 @@
 .cta-editorial {
   background-color: var(--color-bg);
-  padding: 5rem 0 6.5rem;
+  padding: 4rem 0 6rem;
 }
 
 .cta-card {
-  background: linear-gradient(135deg, #0D0E11 0%, #15171E 100%);
+  background: linear-gradient(135deg, #0A0B0E 0%, #12141A 100%);
   border-radius: var(--radius-xl);
   padding: 4.5rem 4rem;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-hover);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cta-card::after {
@@ -20,7 +20,7 @@
   right: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(43, 102, 255, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle at top right, rgba(43, 102, 255, 0.22) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -36,7 +36,7 @@
 .cta-title {
   font-size: clamp(2.25rem, 4.5vw, 3.75rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   letter-spacing: -0.035em;
   line-height: 1.08;
 }
@@ -48,7 +48,7 @@
 .cta-paragraph {
   font-size: 1.08rem;
   line-height: 1.75;
-  color: var(--color-text-light-muted);
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .cta-actions {
@@ -59,15 +59,27 @@
   margin-bottom: 1rem;
 }
 
+.cta-btn {
+  color: #FFFFFF !important;
+}
+
+.cta-btn-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.cta-btn:hover .cta-btn-arrow {
+  transform: translateX(3px);
+}
+
 .cta-outline-btn {
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 .cta-outline-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #FFFFFF;
-  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
 .cta-badges {
@@ -75,13 +87,13 @@
   gap: 1.5rem;
   flex-wrap: wrap;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .cta-badge {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 @media (max-width: 768px) {

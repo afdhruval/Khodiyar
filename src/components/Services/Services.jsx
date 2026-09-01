@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { IMAGES } from '../../assets/images';
 import './Services.css';
 
 const services = [
@@ -10,7 +10,7 @@ const services = [
     category: 'Architecture & Living',
     desc: 'Architect-designed private estates, luxury villas, and multi-family residences engineered with bespoke materials and sustainable finishes.',
     tags: ['Luxury Villas', 'Private Estates', 'Bespoke Finishing', 'Smart Living'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85&auto=format&fit=crop',
+    image: IMAGES.luxuryVilla,
   },
   {
     num: '02',
@@ -18,7 +18,7 @@ const services = [
     category: 'Commercial Spaces',
     desc: 'High-density commercial hubs, modern corporate offices, and retail complexes crafted for durability, footfall, and business growth.',
     tags: ['Office Towers', 'Retail Hubs', 'Corporate Headquarters', 'Mixed-Use'],
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=85&auto=format&fit=crop',
+    image: IMAGES.commercialTower,
   },
   {
     num: '03',
@@ -26,7 +26,7 @@ const services = [
     category: 'Heavy Infrastructure',
     desc: 'Heavy-duty industrial facilities, logistics warehouses, and processing plants built to stringent technical and environmental standards.',
     tags: ['Logistics Warehouses', 'Manufacturing Plants', 'Industrial Parks', 'Heavy Foundations'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85&auto=format&fit=crop',
+    image: IMAGES.industrialHub,
   },
   {
     num: '04',
@@ -34,7 +34,7 @@ const services = [
     category: 'Public Works',
     desc: 'Large-scale civil engineering projects including access roads, bridges, drainage channels, and public development utilities.',
     tags: ['Road Infrastructure', 'Flyovers & Bridges', 'Drainage Networks', 'Site Development'],
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=85&auto=format&fit=crop',
+    image: IMAGES.civilBridge,
   },
   {
     num: '05',
@@ -42,18 +42,16 @@ const services = [
     category: 'Restoration',
     desc: 'Structural rehabilitation, modern facade overhauls, and interior remodeling transforming legacy properties into modern masterpieces.',
     tags: ['Facade Transformation', 'Structural Strengthening', 'Interior Fit-Out', 'Adaptive Reuse'],
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=85&auto=format&fit=crop',
+    image: IMAGES.luxuryEstate,
   },
 ];
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState(0);
-
   return (
     <section className="services-editorial section" id="services">
       <div className="container">
         {/* Section Header */}
-        <div className="services-header" data-aos="fade-up">
+        <div className="services-header">
           <div className="services-header__left">
             <span className="studio-tag">CAPABILITIES & DISCIPLINES</span>
             <h2 className="section-title">
@@ -70,14 +68,8 @@ export default function Services() {
 
         {/* Services Showcase Grid */}
         <div className="services-grid">
-          {services.map((s, idx) => (
-            <motion.div
-              key={s.num}
-              className={`service-card ${activeTab === idx ? 'service-card--active' : ''}`}
-              data-aos="fade-up"
-              data-aos-delay={idx * 60}
-              onMouseEnter={() => setActiveTab(idx)}
-            >
+          {services.map((s) => (
+            <div key={s.num} className="service-card">
               <div className="service-card__top">
                 <span className="service-card__num">{s.num}</span>
                 <span className="service-card__cat">{s.category}</span>
@@ -104,7 +96,7 @@ export default function Services() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

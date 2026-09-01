@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { IMAGES } from '../../assets/images';
 import './Projects.css';
 
 export const projectsData = [
@@ -12,7 +13,7 @@ export const projectsData = [
     year: '2024',
     sqft: '1,20,000',
     type: 'Luxury Villa Complex',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=85&auto=format&fit=crop',
+    image: IMAGES.luxuryVilla,
     featured: true,
   },
   {
@@ -23,18 +24,7 @@ export const projectsData = [
     year: '2023',
     sqft: '2,50,000',
     type: '12-Storey Commercial Hub',
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=85&auto=format&fit=crop',
-    featured: true,
-  },
-  {
-    id: 'green-valley-township',
-    title: 'Green Valley Eco-Township',
-    category: 'Residential',
-    location: 'Vadodara, Gujarat',
-    year: '2023',
-    sqft: '5,00,000',
-    type: 'Sustainable Community',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=85&auto=format&fit=crop',
+    image: IMAGES.commercialTower,
     featured: true,
   },
   {
@@ -45,8 +35,8 @@ export const projectsData = [
     year: '2022',
     sqft: '8,00,000',
     type: 'Heavy Industrial Facility',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=85&auto=format&fit=crop',
-    featured: false,
+    image: IMAGES.industrialHub,
+    featured: true,
   },
   {
     id: 'marina-bridge',
@@ -56,7 +46,7 @@ export const projectsData = [
     year: '2022',
     sqft: '3,00,000',
     type: 'Civil Transportation Structure',
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=85&auto=format&fit=crop',
+    image: IMAGES.civilBridge,
     featured: false,
   },
   {
@@ -67,7 +57,7 @@ export const projectsData = [
     year: '2024',
     sqft: '45,000',
     type: 'Bespoke Architectural Villa',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=85&auto=format&fit=crop',
+    image: IMAGES.luxuryEstate,
     featured: false,
   },
 ];
@@ -89,7 +79,7 @@ export default function Projects({ showAll = false }) {
     <section className="projects-editorial section" id="projects">
       <div className="container">
         {/* Header */}
-        <div className="projects-header" data-aos="fade-up">
+        <div className="projects-header">
           <div className="projects-header__left">
             <span className="studio-tag">PORTFOLIO · 2005–2026</span>
             <h2 className="section-title">
@@ -108,7 +98,7 @@ export default function Projects({ showAll = false }) {
 
         {/* Filter */}
         {showAll && (
-          <div className="projects-filters" data-aos="fade-up">
+          <div className="projects-filters">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -122,51 +112,44 @@ export default function Projects({ showAll = false }) {
         )}
 
         {/* Projects Grid */}
-        <motion.div className="projects-grid" layout>
-          <AnimatePresence mode="popLayout">
-            {filtered.map((project, idx) => (
-              <motion.article
-                key={project.id}
-                className={`project-entry ${idx === 0 && !showAll ? 'project-entry--large' : ''}`}
-                layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <Link to={`/projects/${project.id}`} className="project-card-wrap">
-                  <div className="project-frame">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="project-photo"
-                      loading="lazy"
-                    />
-                    <div className="project-frame-tag">{project.category}</div>
+        <div className="projects-grid">
+          {filtered.map((project, idx) => (
+            <article
+              key={project.id}
+              className={`project-entry ${idx === 0 && !showAll ? 'project-entry--large' : ''}`}
+            >
+              <Link to={`/projects/${project.id}`} className="project-card-wrap">
+                <div className="project-frame">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-photo"
+                    loading="lazy"
+                  />
+                  <div className="project-frame-tag">{project.category}</div>
+                </div>
+
+                <div className="project-details">
+                  <div className="project-main-info">
+                    <h3 className="project-heading">{project.title}</h3>
+                    <p className="project-type-label">{project.type}</p>
                   </div>
 
-                  <div className="project-details">
-                    <div className="project-main-info">
-                      <h3 className="project-heading">{project.title}</h3>
-                      <p className="project-type-label">{project.type}</p>
-                    </div>
-
-                    <div className="project-meta-row">
-                      <span className="project-meta-item">📍 {project.location}</span>
-                      <span className="project-meta-sep">•</span>
-                      <span className="project-meta-item">{project.sqft} sq.ft</span>
-                      <span className="project-meta-sep">•</span>
-                      <span className="project-meta-item">{project.year}</span>
-                    </div>
+                  <div className="project-meta-row">
+                    <span className="project-meta-item">📍 {project.location}</span>
+                    <span className="project-meta-sep">•</span>
+                    <span className="project-meta-item">{project.sqft} sq.ft</span>
+                    <span className="project-meta-sep">•</span>
+                    <span className="project-meta-item">{project.year}</span>
                   </div>
-                </Link>
-              </motion.article>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
 
         {!showAll && (
-          <div className="projects-bottom-cta" data-aos="fade-up">
+          <div className="projects-bottom-cta">
             <Link to="/projects" className="btn-pill-outline">
               <span>Explore the complete project archive</span>
               <span>→</span>

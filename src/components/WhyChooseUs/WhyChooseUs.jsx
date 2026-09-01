@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
       <div className="container">
         <div className="why-grid">
           {/* Sticky Left Column */}
-          <div className="why-left" data-aos="fade-right">
+          <div className="why-left">
             <span className="studio-tag">THE KHODIYAR STANDARD</span>
             <h2 className="section-title">
               Why Gujarat’s leading developers and homeowners <span className="highlight-blue">trust our build.</span>
@@ -63,13 +63,8 @@ export default function WhyChooseUs() {
           {/* Right Column: Numbered Criteria */}
           <div className="why-right">
             <div className="why-criteria-list">
-              {criteria.map((item, idx) => (
-                <div
-                  className="why-criterion-card"
-                  key={item.num}
-                  data-aos="fade-up"
-                  data-aos-delay={idx * 60}
-                >
+              {criteria.map((item) => (
+                <div className="why-criterion-card" key={item.num}>
                   <div className="why-criterion-header">
                     <span className="why-criterion-num">{item.num}</span>
                     <h3 className="why-criterion-title">{item.title}</h3>

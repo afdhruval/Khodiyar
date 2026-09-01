@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import './styles/global.css';
 
 import Navbar from './components/Navbar/Navbar';
@@ -40,15 +38,6 @@ function AppContent() {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 60,
-      delay: 40,
-    });
 
     return () => {
       lenis.destroy();

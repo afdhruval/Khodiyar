@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { IMAGES } from '../../assets/images';
 import './Hero.css';
 
-// Architectural sculpture / organic concrete form matching the reference circular frame
-const HERO_SCULPTURE = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=90&auto=format&fit=crop';
-
-// Floating dots coordinates for subtle authentic craft
 const particles = [
   { top: '15%', left: '8%', size: 4, delay: 0 },
   { top: '28%', left: '32%', size: 5, delay: 1.2 },
@@ -50,38 +47,23 @@ export default function Hero() {
         <div className="hero-grid">
           {/* Left Column: Massive Editorial Headline */}
           <div className="hero-left">
-            <motion.div
-              className="studio-tag"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            >
+            <div className="studio-tag">
               PREMIER BUILDER · EST. 2005 · GUJARAT
-            </motion.div>
+            </div>
 
-            <motion.h1
-              className="editorial-headline hero-title"
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            >
+            <h1 className="editorial-headline hero-title">
               We build landmark<br />
               structures people<br />
               <span className="highlight-blue">remember <span className="hero-title-dot">.</span></span>
-            </motion.h1>
+            </h1>
           </div>
 
           {/* Right Column: Architectural Circle & Boutique Pitch */}
           <div className="hero-right">
-            <motion.div
-              className="hero-media-wrapper"
-              initial={{ opacity: 0, scale: 0.92 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            >
+            <div className="hero-media-wrapper">
               <div className="hero-circle-mask">
                 <img
-                  src={HERO_SCULPTURE}
+                  src={IMAGES.heroSculpture}
                   alt="Architectural masterwork by Khodiyar Construction"
                   className="hero-circle-img"
                 />
@@ -90,14 +72,9 @@ export default function Hero() {
                   <span>EXPERTISE</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="hero-bio-block"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            >
+            <div className="hero-bio-block">
               <p className="hero-bio-text">
                 Two decades, one obsession — turning ambitious blueprints into enduring
                 landmarks with the craft of master builders and the precision of a modern team.
@@ -112,17 +89,12 @@ export default function Hero() {
                   <span>Explore 500+ builds</span>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
-        {/* Minimal Bottom Trust Band */}
-        <motion.div
-          className="hero-footer-bar"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
+        {/* Bottom Trust Band */}
+        <div className="hero-footer-bar">
           <div className="hero-trust-item">
             <span className="hero-trust-num">500+</span>
             <span className="hero-trust-label">Structures Delivered</span>
@@ -142,7 +114,7 @@ export default function Hero() {
             <span className="hero-trust-num">Gujarat</span>
             <span className="hero-trust-label">Ahmedabad · Surat · Rajkot</span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

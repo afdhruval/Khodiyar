@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { IMAGES } from '../../assets/images';
 import './About.css';
-
-const ABOUT_IMG = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&q=85&auto=format&fit=crop';
 
 const pillars = [
   {
@@ -27,7 +26,7 @@ export default function About() {
     <section className="about-editorial section">
       <div className="container">
         {/* Top Header */}
-        <div className="about-header" data-aos="fade-up">
+        <div className="about-header">
           <div className="about-header__left">
             <span className="studio-tag">WHO WE ARE · AHMEDABAD, GUJARAT</span>
             <h2 className="section-title">
@@ -45,24 +44,24 @@ export default function About() {
 
         {/* 2-Column Showcase */}
         <div className="about-showcase">
-          {/* Left Media */}
-          <div className="about-media" data-aos="fade-right">
+          {/* Left Media with real engineers / people on site */}
+          <div className="about-media">
             <div className="about-img-frame">
               <img
-                src={ABOUT_IMG}
-                alt="Khodiyar Construction architectural craftsmanship"
+                src={IMAGES.engineersPeople}
+                alt="Khodiyar Construction senior engineers on site with blueprints"
                 className="about-img"
                 loading="lazy"
               />
               <div className="about-img-caption">
                 <span className="about-caption-dot" />
-                <span>On-site engineering team · Ahmedabad Hub</span>
+                <span>Senior civil engineering team on-site · Gujarat</span>
               </div>
             </div>
           </div>
 
           {/* Right Pillars */}
-          <div className="about-pillars" data-aos="fade-left">
+          <div className="about-pillars">
             <div className="about-pillars-list">
               {pillars.map((p) => (
                 <div className="about-pillar-item" key={p.num}>

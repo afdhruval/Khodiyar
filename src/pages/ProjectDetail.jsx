@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { projectsData } from '../components/Projects/Projects';
 import CTA from '../components/CTA/CTA';
 import './Page.css';
@@ -67,7 +66,7 @@ export default function ProjectDetail() {
       <section className="section" style={{ backgroundColor: 'var(--color-bg)' }}>
         <div className="container">
           <div className="detail-body-grid">
-            <div className="detail-narrative" data-aos="fade-right">
+            <div className="detail-narrative">
               <span className="studio-tag">ARCHITECTURAL BRIEF</span>
               <h2 className="section-title">
                 Engineering excellence executed with <span className="highlight-blue">uncompromising rigor.</span>
@@ -100,7 +99,7 @@ export default function ProjectDetail() {
             </div>
 
             {/* Sidebar Card */}
-            <div className="detail-sidebar-wrap" data-aos="fade-left">
+            <div className="detail-sidebar-wrap">
               <div className="detail-sidebar-card">
                 <h3 className="detail-sidebar-title">Project Summary</h3>
                 <div className="detail-sidebar-rows">
@@ -132,7 +131,7 @@ export default function ProjectDetail() {
       {/* Related Builds */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-alt)', borderTop: '1px solid var(--color-border)' }}>
         <div className="container">
-          <div data-aos="fade-up" style={{ marginBottom: '3rem' }}>
+          <div style={{ marginBottom: '3rem' }}>
             <span className="studio-tag">MORE BUILDS</span>
             <h2 className="section-title">Related <span className="highlight-blue">case studies.</span></h2>
           </div>

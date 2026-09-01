@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -26,7 +25,7 @@ export default function Footer() {
     <footer className="footer-studio" id="footer">
       <div className="container">
         {/* Massive Top Inquiry Callout */}
-        <div className="footer-hero" data-aos="fade-up">
+        <div className="footer-hero">
           <div className="footer-hero__left">
             <span className="footer-tag">READY TO BUILD</span>
             <h2 className="footer-headline">
